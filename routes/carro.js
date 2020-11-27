@@ -3,11 +3,6 @@ const express = require('express')
 const Carro = require('../models/carro')
 const {fabricante, Fabricante} = require('../models/fabricante')
 const router = express.Router()
-//const Role = require('../helpers/role')
-//const autorize = require('../middleware/role')
-//const auth = require('../middleware/auth')
-//const {Company} = require('../models/company')
-//const router = express.Router()
 const { check, validationResult } = require('express-validator');
 
 //trae todos los carros

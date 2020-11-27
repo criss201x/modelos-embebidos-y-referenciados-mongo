@@ -5,20 +5,12 @@ const carro = require('./routes/carro')
 const usuario = require('./routes/usuario')
 const fabricante = require('./routes/fabricante')
 const venta = require('./routes/venta')
-//const user = require('./routes/user')
-//const company = require('./routes/company')
-//const sale = require('./routes/sale')
-//const auth = require('./routes/auth')
 
 app.use(express.json())
 app.use('/api/carro/', carro)
 app.use('/api/usuario/', usuario)
 app.use('/api/fabricante/', fabricante)
 app.use('/api/venta/', venta)
-//app.use('/api/user/', user)
-//app.use('/api/company/', company)
-//app.use('/api/sale/', sale)
-//app.use('/api/auth/', auth)
 
 const port = process.env.PORT || 3003
 
