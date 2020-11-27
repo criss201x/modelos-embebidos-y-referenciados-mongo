@@ -1,0 +1,26 @@
+{
+  "name": "ejercicio",
+  "version": "1.0.0",
+  "description": "esto es un ejercicio de un rest api en node js con conexion a mongobd con el framework mongoose",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "nodemon --watch index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "mongoose",
+    "microservicios",
+    "apirest",
+    "xpress",
+    "nuevasTecnologias"
+  ],
+  "author": "cristian alape",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-validator": "^6.7.0",
+    "mongoose": "^5.10.16",
+    "morgan": "^1.10.0"
+  }
+}
