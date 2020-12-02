@@ -16,7 +16,7 @@ router.post('/', async(req, res)=>{
     if(!usuario) return res.status(400).send('Usuario no existe')
 
     const carro = await Carro.findById(req.body.carroId)
-    if(!carro) return res.status(400).send('ese carro no existe')
+    if(!carro) return res.status(400).send('ese carro no existio')
 
     if(carro.vendido === true) return res.status(400).send('Ese carro ya hse vendio')
 
