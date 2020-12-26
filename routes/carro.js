@@ -14,7 +14,7 @@ router.get('/', async(req, res)=> {
     res.send(carros)
 })
 
-//trae un carro
+//trae un automovil
 router.get('/:id', async(req, res)=>{
     const carro = await Carro.findById(req.params.id)
     if(!carro) return res.status(404).send('no sea encontrado un carro con ese id')
