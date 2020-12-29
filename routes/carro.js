@@ -14,6 +14,7 @@ router.get('/', async(req, res)=> {
     res.send(carros)
 })
 
+//populate
 //trae un automovil
 router.get('/:id', async(req, res)=>{
     const carro = await Carro.findById(req.params.id)
