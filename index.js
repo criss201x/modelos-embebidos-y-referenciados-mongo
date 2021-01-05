@@ -12,7 +12,7 @@ app.use('/api/usuario/', usuario)
 app.use('/api/fabricante/', fabricante)
 app.use('/api/venta/', venta)
 
-const port = process.env.PORT || 3003
+const port = process.env.PORT || 3004
 
 app.listen(port, ()=> console.log('Escuchando desde el puerto: ' + port))
 

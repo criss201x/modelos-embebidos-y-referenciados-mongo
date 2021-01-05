@@ -11,9 +11,9 @@
     "nodejs",
     "mongoose",
     "microservicios",
-    "apirest",
-    "xpress",
-    "nuevasTecnologias"
+    "",
+    "",
+    ""
   ],
   "author": "cristian alape",
   "license": "ISC",
