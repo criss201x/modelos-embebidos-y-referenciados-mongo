@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 const EsquemaUsuario = new mongoose.Schema({
-    nombre:{
+    nombre: {
         type: String,
         required: true
     },
@@ -11,16 +11,16 @@ const EsquemaUsuario = new mongoose.Schema({
         required: true,
         unique: true
     },
-/*    password: {
+    password: {
         type: String,
         required: true
-    },*/
-//    esAdmin: Boolean,
-//    rol: String,
-    fecha_creacion: {type:Date, default:Date.now}
+    },
+    esAdmin: Boolean,
+    rol: String,
+    fecha_creacion: { type: Date, default: Date.now }
 })
 
 
-const Usuario = mongoose.model('usuario', EsquemaUsuario)//coleccion en bd y esquema en mongosse
+const Usuario = mongoose.model('usuario', EsquemaUsuario) //coleccion en bd y esquema en mongosse
 
 module.exports = Usuario
