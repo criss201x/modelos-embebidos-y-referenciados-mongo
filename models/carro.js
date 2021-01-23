@@ -4,22 +4,22 @@ const { fabricanteEsquema } = require('./fabricante')
 
 const carroEsquema = new mongosee.Schema({ //esqumea y restricciones del esquema
     fabricante: {
-        type: fabricanteEsquema, //metodo de referenciacion o normalizacion en mongo 
-        required: true
+        /*type: fabricanteEsquema, //metodo de referenciacion o normalizacion en mongo 
+        required: true*/
 
 
-            type: mongosee.Schema.Types.ObjectId, //metodo de referenciacion o normalizacion en mongo 
+        type: mongosee.Schema.Types.ObjectId, //metodo de referenciacion o normalizacion en mongo 
         ref: 'fabricante'
 
 
 
-            type: String,
+        /*type: String,
         required: true, //not null!!!!
         uppercase: true, //solo mayusculas
         trim: true, //que no se quiten espacios en blanco
         minlength: 2, //minimo dos caracteres
         maxlength: 99, //maximo 99 caracteres
-        enum: ['BMW', 'AUDI', 'RENAULT'] //solo deja agregar uno de estos  campos
+        enum: ['BMW', 'AUDI', 'RENAULT'] //solo deja agregar uno de estos  campos*/
 
     },
     modelo: String,
