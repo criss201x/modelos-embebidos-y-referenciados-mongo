@@ -1,15 +1,16 @@
+//pendiente node modules npm i
 const mongosee = require('mongoose')
 const { fabricanteEsquema } = require('./fabricante')
 
 
 const carroEsquema = new mongosee.Schema({ //esqumea y restricciones del esquema
     fabricante: {
-        /*type: fabricanteEsquema, //metodo de referenciacion o normalizacion en mongo 
-        required: true*/
+        type: fabricanteEsquema, //metodo de referenciacion o normalizacion en mongo 
+        required: true
 
 
-        type: mongosee.Schema.Types.ObjectId, //metodo de referenciacion o normalizacion en mongo 
-        ref: 'fabricante'
+        /*type: mongosee.Schema.Types.ObjectId, //metodo de referenciacion o normalizacion en mongo 
+        ref: 'fabricante'*/
 
 
 
@@ -34,7 +35,7 @@ const carroEsquema = new mongosee.Schema({ //esqumea y restricciones del esquema
         type: Number,
         min: 2000,
         max: 2030
-            // get: y => Math.round(y)//redondea al entero mas cercano          
+        get: y => Math.round(y) //redondea al entero mas cercano          
     },
     extras: [String],
     date: { type: Date, default: Date.now }
