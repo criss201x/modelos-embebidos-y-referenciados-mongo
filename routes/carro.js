@@ -52,9 +52,9 @@ router.post('/', [
 
 
 //metodo post para documentos referenciados o normalizados
-/*router.post('/', [    
-    check('modelo').isLength({min: 3})
-],async(req, res)=>{
+router.post('/', [
+    check('modelo').isLength({ min: 3 })
+], async(req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
         return res.status(422).json({ errors: errors.array() });
@@ -69,7 +69,7 @@ router.post('/', [
     })
     const resultado = await carro.save()
     res.status(201).send(resultado)
-})*/
+})
 
 
 
