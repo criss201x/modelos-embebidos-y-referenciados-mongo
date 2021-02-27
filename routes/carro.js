@@ -9,8 +9,8 @@ const { check, validationResult } = require('express-validator');
 router.get('/', async(req, res) => {
     const carros = await Carro
         .find()
-        //.populate('fabricante', 'name pais') //muestra solo el pais
-        .populate('fabricante') //accede a la coleccion fabricante y con ese id trae todos los datos del fabricante         
+        .populate('fabricante', 'name pais') //muestra solo el pais
+        //.populate('fabricante') //accede a la coleccion fabricante y con ese id trae todos los datos del fabricante         
     res.send(carros)
 })
 
@@ -75,8 +75,8 @@ router.post('/', [
 
 //actualizar en bd con metodo put
 router.put('/:id', [
-    //check('fabricante').isLength({min: 3}),
-    check('modelo').isLength({ min: 3 })
+    check('fabricante').isLength({ min: 3 }),
+    //check('modelo').isLength({ min: 3 })
 ], async(req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
