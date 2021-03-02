@@ -9,8 +9,8 @@ const { check, validationResult } = require('express-validator');
 router.get('/', async(req, res) => {
     const carros = await Carro
         .find()
-        .populate('fabricante', 'name pais') //muestra solo el pais
-        //.populate('fabricante') //accede a la coleccion fabricante y con ese id trae todos los datos del fabricante         
+        //.populate('fabricante', 'name pais') //muestra solo el pais
+        .populate('fabricante') //accede a la coleccion fabricante y con ese id trae todos los datos del fabricante         
     res.send(carros)
 })
 

@@ -35,17 +35,17 @@ router.post('/', async(req, res) => {
 
     //metodo normal
 
-    const resultado = await venta.save()
+    /*const resultado = await venta.save()
     usuario.esCliente = true
     usuario.save()
     carro.venta = true
     carro.save()
-    res.status(201).send(resultado)
+    res.status(201).send(resultado)*/
 
 
 
     //  metodo transaccional
-    /*const session = await mongoose.startSession()
+    const session = await mongoose.startSession()
     session.startTransaction()
     try {
         const resultado = await venta.save()
@@ -60,7 +60,7 @@ router.post('/', async(req, res) => {
         await session.abortTransaction()
         session.endSession()
         res.status(500).send(e.message)
-    }*/
+    }
 
 })
 
